@@ -18,15 +18,7 @@ import traceback
 import importlib.util
 from tqdm import tqdm
 
-# Parse command-line arguments
-parser = argparse.ArgumentParser()
-parser.add_argument(
-    "--config",
-    type=str,
-    default="config/growth_config.py",
-    help="Path to the configuration file.",
-)
-args = parser.parse_args()
+
 
 
 def main(config_path: str):
@@ -160,4 +152,13 @@ def main(config_path: str):
 
 
 if __name__ == "__main__":
+    # Parse command-line arguments
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--config",
+        type=str,
+        default="config/growth_config.py",
+        help="Path to the configuration file.",
+    )
+    args = parser.parse_args()
     main(args.config)
