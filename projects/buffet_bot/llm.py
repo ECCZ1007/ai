@@ -1,7 +1,7 @@
 import IPython
 import os
-import openai
-import pinecone
+# import openai
+# import pinecone
 import anthropic
 import utils
 
