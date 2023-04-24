@@ -42,7 +42,7 @@ class BuffetBot:
             self.additional_context_sample_size = additional_context_sample_size
 
         # Set OpenAI API Key
-        if llm == 'openai'
+        if llm == 'openai':
             with open("/Users/michael/Desktop/wip/openai_credentials.txt", "r") as f:
                 OPENAI_API_KEY = f.readline().strip()
                 openai.api_key = OPENAI_API_KEY
