@@ -4,7 +4,7 @@ from ml_collections import ConfigDict
 def get_config():
     config = ConfigDict()
     config.real_trading = False
-    config.investor_type = "simple"
+    config.investor_type = "simple_nasdaq"
     config.initial_investment = 100_000
     config.context_window_date = "2018-01-01"
     config.investment_schedule = "monthly"
