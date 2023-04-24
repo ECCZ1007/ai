@@ -5,8 +5,8 @@ import matplotlib.dates as mdates
 import matplotlib.pyplot as plt
 import numpy as np
 import yfinance as yf
-import IPython
-from fredapi import Fred
+# import IPython
+# from fredapi import Fred
 
 
 def get_average_values(folder):
@@ -71,6 +71,7 @@ folders = [
     "news_context_ss_200",
     "news_context",
     "no_temp_no_context_4_year",
+    "news_context_ss_200_filtered_simple",
 ]  # Add your folder names here
 folder_labels = [
     "Claude Value No News Context",
@@ -83,6 +84,7 @@ folder_labels = [
     "Claude With News Context SS200",
     "Claude With News Context SS100",
     "Claude Base",
+    "Claude Simple",
 ]  # Add your desired legend names for folders here
 
 # Vars

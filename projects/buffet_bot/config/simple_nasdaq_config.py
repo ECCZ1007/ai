@@ -12,7 +12,7 @@ def get_config():
     config.num_simulations = 1
     config.llm_additional_context = "news"
     config.experiment_folder_path = (
-        "output/experiments/news_context_ss_200_filtered_simple"
+        "output/experiments/news_context_ss_200_filtered_simple_nasdaq"
     )
     config.additional_context_dataset_path = (
         "context_data/huff_news_with_impact_scores.json"
