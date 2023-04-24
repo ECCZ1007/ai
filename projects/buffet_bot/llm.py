@@ -14,6 +14,7 @@ class BuffetBot:
         store_conversation_history=False,
         additional_context_sample_size=100,
         additional_context_dataset_path="context_data/huff_news_2012_2021.json",
+        anthropic_key_path="/Users/michael/Desktop/wip/anthropic_credentials.txt"
     ):
         """Initializes the BuffetBot class.
 
@@ -47,7 +48,7 @@ class BuffetBot:
 
         if llm == "anthropic":
             # Set Anthropic API Key
-            with open("/Users/michael/Desktop/wip/anthropic_credentials.txt", "r") as f:
+            with open(anthropic_key_path, "r") as f:
                 ANTHROPIC_API_KEY = f.readline().strip()
             self.client = anthropic.Client(ANTHROPIC_API_KEY)
 
