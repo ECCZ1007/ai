@@ -21,7 +21,8 @@ from tqdm import tqdm
 
 
 
-def main(config_path: str):
+def main(config_path: str,
+         anthropic_key_path="/Users/michael/Desktop/wip/anthropic_credentials.txt"):
     # Init configs
     spec = importlib.util.spec_from_file_location("config", config_path)
     config = importlib.util.module_from_spec(spec)
@@ -46,6 +47,7 @@ def main(config_path: str):
             additional_context=llm_additional_context,
             additional_context_sample_size=config.additional_context_sample_size,
             additional_context_dataset_path=config.additional_context_dataset_path,
+            anthropic_key_path=anthropic_key_path,
         )
     else:
         bot = BuffetBot(llm="anthropic", additional_context=llm_additional_context)
