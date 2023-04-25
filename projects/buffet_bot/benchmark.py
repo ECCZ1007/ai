@@ -72,6 +72,8 @@ folders = [
     "news_context",
     "no_temp_no_context_4_year",
     "news_context_ss_200_filtered_simple",
+    "news_context_ss_200_filtered_simple_nasdaq",
+    "news_context_ss_200_filtered_simple_spx",
 ]  # Add your folder names here
 folder_labels = [
     "Claude Value No News Context",
@@ -85,6 +87,8 @@ folder_labels = [
     "Claude With News Context SS100",
     "Claude Base",
     "Claude Simple",
+    "Claude Simple Nasdaq",
+    "Claude Simple SPX",
 ]  # Add your desired legend names for folders here
 
 # Vars
