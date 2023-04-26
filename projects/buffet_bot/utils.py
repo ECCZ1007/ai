@@ -201,6 +201,8 @@ def get_llm_response(bot, investor_type, context_window_date, current_holdings):
         llm_prompt = f"You are an investor. Build a portfolio which aims to outperform the SP500 on a 6 month time horizon. You do not have knowledge of events after {context_window_date}. Your current portfolio holdings in JSON format are: {current_holdings}. Always return only the ticker symbols of your investments and the percentage holding (integer percentages) in JSON format. Your percentage holdings should not exceed 100%. Just return the JSON object, this is very important."
     elif investor_type == "simple_nasdaq":
         llm_prompt = f"You are an investor. Build a portfolio which aims to outperform the Nasdaq 100 on a 6 month time horizon. You do not have knowledge of events after {context_window_date}. Your current portfolio holdings in JSON format are: {current_holdings}. Always return only the ticker symbols of your investments and the percentage holding (integer percentages) in JSON format. Your percentage holdings should not exceed 100%. Just return the JSON object, this is very important."
+    elif investor_type == "simple_nasdaq_cheat":
+        llm_prompt = f"You are an investor. Build a portfolio which aims to outperform the Nasdaq 100 on a 6 month time horizon. Your current portfolio holdings in JSON format are: {current_holdings}. Always return only the ticker symbols of your investments and the percentage holding (integer percentages) in JSON format. Your percentage holdings should not exceed 100%. Just return the JSON object, this is very important."
 
     try:
         response = bot.get_response(llm_prompt, context_window_date)
